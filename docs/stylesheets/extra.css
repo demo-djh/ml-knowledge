@@ -1,0 +1,154 @@
+/* ==========================================================================
+   extra.css
+   仿 Claude Platform Docs 视觉风格（暖白背景 + 珊瑚橙强调色 + 简洁无衬线字体）
+   用于 mkdocs-material，放在 docs/stylesheets/extra.css，
+   并在 mkdocs.yml 中通过 extra_css 引入。
+   注意：这是"风格致敬"（配色 / 字体 / 版式节奏），并非对 Anthropic 官方
+   资源（Logo、字体文件本身、图标）的复制，请勿直接抓取或使用官方站点的
+   字体文件 / 图片等受版权保护的素材。
+   ========================================================================== */
+
+:root {
+  /* Claude 品牌风格色板：暖米白背景 + 珊瑚橙强调色 */
+  --kb-bg:            #FAF9F5;   /* 页面背景，暖白 */
+  --kb-bg-soft:       #F3F1EA;   /* 卡片/侧栏背景 */
+  --kb-border:        #E6E2D8;   /* 细边框 */
+  --kb-text:          #2B2A27;   /* 正文深棕黑 */
+  --kb-text-soft:     #6B6862;   /* 次要文字 */
+  --kb-accent:        #D97757;   /* 珊瑚橙（强调色/链接/按钮） */
+  --kb-accent-hover:  #C4623F;
+  --kb-code-bg:       #2B2A27;
+  --kb-code-text:     #F3F1EA;
+
+  --md-primary-fg-color:             var(--kb-accent);
+  --md-primary-fg-color--light:      var(--kb-accent);
+  --md-primary-fg-color--dark:       var(--kb-accent-hover);
+  --md-accent-fg-color:              var(--kb-accent);
+  --md-typeset-a-color:              var(--kb-accent);
+
+  --md-text-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "PingFang SC", "Microsoft YaHei", sans-serif;
+  --md-code-font: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+}
+
+[data-md-color-scheme="default"] {
+  --md-default-bg-color: var(--kb-bg);
+  --md-default-fg-color: var(--kb-text);
+  --md-default-fg-color--light: var(--kb-text-soft);
+}
+
+body,
+.md-typeset {
+  font-family: var(--md-text-font);
+  color: var(--kb-text);
+  letter-spacing: 0.1px;
+}
+
+/* 顶部导航栏：去掉厚重阴影，改用细底边线，贴近 Claude Docs 的轻量感 */
+.md-header {
+  background-color: var(--kb-bg);
+  color: var(--kb-text);
+  box-shadow: none;
+  border-bottom: 1px solid var(--kb-border);
+}
+.md-header__title,
+.md-header__topic {
+  color: var(--kb-text);
+}
+.md-tabs {
+  background-color: var(--kb-bg);
+  border-bottom: 1px solid var(--kb-border);
+}
+.md-tabs__link {
+  color: var(--kb-text-soft);
+}
+.md-tabs__link--active,
+.md-tabs__link:hover {
+  color: var(--kb-accent);
+}
+
+/* 左侧导航：卡片式，圆角，选中项左侧描边高亮 */
+.md-sidebar__scrollwrap {
+  background: transparent;
+}
+.md-nav__item .md-nav__link--active,
+.md-nav__link:focus,
+.md-nav__link:hover {
+  color: var(--kb-accent);
+}
+.md-nav__link {
+  border-radius: 6px;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+.md-nav__link:hover {
+  background-color: var(--kb-bg-soft);
+}
+.md-nav__item .md-nav__link--active {
+  font-weight: 600;
+}
+
+/* 正文排版 */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  font-weight: 650;
+  color: var(--kb-text);
+}
+.md-typeset h1 { font-size: 2rem; }
+.md-typeset h2 {
+  border-bottom: 1px solid var(--kb-border);
+  padding-bottom: 0.4rem;
+  margin-top: 2.2rem;
+}
+.md-typeset a {
+  color: var(--kb-accent);
+  text-decoration: none;
+}
+.md-typeset a:hover {
+  text-decoration: underline;
+}
+
+/* 卡片 / admonition：圆角 + 轻边框，去掉刺眼的默认配色 */
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: 10px;
+  border: 1px solid var(--kb-border);
+  background-color: var(--kb-bg-soft);
+  box-shadow: none;
+}
+.md-typeset .admonition-title {
+  background-color: rgba(217, 119, 87, 0.08);
+}
+
+/* 代码块：深色块，圆角，贴近 Claude Docs 的代码风格 */
+.md-typeset code {
+  background-color: rgba(217, 119, 87, 0.08);
+  color: var(--kb-accent-hover);
+  border-radius: 4px;
+}
+.md-typeset pre > code {
+  background-color: var(--kb-code-bg);
+  color: var(--kb-code-text);
+  border-radius: 10px;
+}
+.md-typeset .highlight {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* 按钮 */
+.md-typeset .md-button {
+  border-radius: 8px;
+  background-color: var(--kb-accent);
+  color: #fff;
+  border: none;
+}
+.md-typeset .md-button:hover {
+  background-color: var(--kb-accent-hover);
+}
+
+/* 搜索框：胶囊圆角，贴近 Claude Docs 搜索样式 */
+.md-search__form {
+  border-radius: 999px;
+  background-color: var(--kb-bg-soft);
+}
