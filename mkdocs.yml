@@ -2,14 +2,13 @@ site_name: 机器学习速成手册
 site_description: Quick Guide to Machine Learning
 site_author: Demo
 
-repo_name: demo-djh/ml-knowledg
-repo_url: https://demo-djh.github.io/ml-knowledge
+repo_name: demo-djh/ml-knowledge
+repo_url: https://github.com/demo-djh/ml-knowledge
 
 theme:
   name: material
   favicon: logo.png
   logo: logo.png
-  
 
   features:
     - navigation.tabs
@@ -18,7 +17,6 @@ theme:
     - navigation.top
     - search.suggest
     - search.highlight
-
 
   palette:
     - media: "(prefers-color-scheme: light)"
@@ -39,11 +37,11 @@ theme:
 
   font: false
 
-   extra_css:
-     - stylesheets/extra.css
-   extra_javascript:
-     - javascripts/watermark.js
-     - javascripts/protect.js
+extra_css:
+  - stylesheets/extra.css
+extra_javascript:
+  - javascripts/watermark.js
+  - javascripts/protect.js
 
 markdown_extensions:
   - pymdownx.highlight
@@ -56,14 +54,12 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-# mkdocs.yml
-plugins:
-  - search
-  - awesome-pages
-  
   - AI:
       - Overview: AI/README.md
       - Deep Learning: AI/Deep-Learning/README.md
-
   - Research:
       - Overview: Research/README.md
+
+plugins:
+  - search
+  - awesome-pages
