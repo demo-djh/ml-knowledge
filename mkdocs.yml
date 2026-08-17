@@ -56,7 +56,11 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-
+# mkdocs.yml
+plugins:
+  - search
+  - awesome-pages
+  
   - AI:
       - Overview: AI/README.md
       - Deep Learning: AI/Deep-Learning/README.md
