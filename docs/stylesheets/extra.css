@@ -1,0 +1,552 @@
+/* =========================================================
+   0. Claude Docs 风格主题
+   参考 platform.claude.com/docs 的字体与配色：
+   暖白背景 + 衬线标题 + 陶土色（terracotta）强调色
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root,
+[data-md-color-scheme="default"] {
+  /* 字体 */
+  --md-text-font: "Inter", "PingFang SC", "PingFang TC", "Helvetica Neue", Arial, sans-serif;
+  --md-code-font: "JetBrains Mono", monospace;
+  --claude-serif-font: "Source Serif 4", "PingFang SC", "PingFang TC", Georgia, serif;
+
+  /* Claude 品牌配色（浅色模式）*/
+  --claude-accent: #D97757;         /* 陶土色主强调色 */
+  --claude-accent-hover: #C15F3C;
+  --claude-bg: #FAF9F5;             /* 暖白背景 */
+  --claude-bg-alt: #F0EEE6;         /* 次级暖白，用于侧栏/卡片 */
+  --claude-text: #1F1E1D;           /* 暖黑正文 */
+  --claude-text-muted: #6B6558;     /* 次级灰褐文字 */
+  --claude-border: #E5E1D8;
+
+  --md-primary-fg-color: var(--claude-bg);
+  --md-primary-fg-color--light: var(--claude-bg);
+  --md-primary-fg-color--dark: var(--claude-bg);
+  --md-primary-bg-color: var(--claude-text);
+  --md-primary-bg-color--light: var(--claude-text-muted);
+
+  --md-accent-fg-color: var(--claude-accent);
+  --md-accent-fg-color--transparent: rgba(217, 119, 87, 0.1);
+  --md-accent-bg-color: #FFFFFF;
+
+  --md-default-bg-color: var(--claude-bg);
+  --md-default-fg-color: var(--claude-text);
+  --md-default-fg-color--light: var(--claude-text-muted);
+  --md-default-fg-color--lighter: var(--claude-border);
+  --md-typeset-a-color: var(--claude-accent);
+
+  --md-footer-bg-color: var(--claude-text);
+  --md-footer-fg-color: var(--claude-bg);
+}
+
+[data-md-color-scheme="slate"] {
+  /* Claude 品牌配色（深色模式）*/
+  --claude-accent: #E08A67;
+  --claude-accent-hover: #EDA786;
+  --claude-bg: #1F1E1D;
+  --claude-bg-alt: #26251F;
+  --claude-text: #F0EEE6;
+  --claude-text-muted: #B7B2A5;
+  --claude-border: #3A382F;
+
+  --md-default-bg-color: var(--claude-bg);
+  --md-default-fg-color: var(--claude-text);
+  --md-default-fg-color--light: var(--claude-text-muted);
+  --md-default-fg-color--lighter: var(--claude-border);
+
+  --md-primary-fg-color: var(--claude-bg);
+  --md-primary-bg-color: var(--claude-text);
+
+  --md-accent-fg-color: var(--claude-accent);
+  --md-typeset-a-color: var(--claude-accent);
+
+  --md-footer-bg-color: #16150F;
+  --md-footer-fg-color: var(--claude-text);
+}
+
+body,
+.md-typeset,
+.md-header,
+.md-tabs,
+.md-nav,
+.md-sidebar,
+.md-footer {
+  font-family: var(--md-text-font);
+}
+
+/* 标题使用衬线字体，呼应 Claude Docs 的排版风格 */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4 {
+  font-family: var(--claude-serif-font);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--claude-text, var(--md-default-fg-color));
+}
+
+.md-typeset h1 {
+  font-weight: 600;
+  font-size: 2.2rem;
+}
+
+/* 顶部导航栏改为暖白底、深色文字，而非默认强调色底 */
+.md-header {
+  background-color: var(--claude-bg);
+  color: var(--claude-text);
+  box-shadow: 0 1px 0 var(--claude-border);
+}
+
+.md-header__title,
+.md-header__topic,
+.md-header__button {
+  color: var(--claude-text);
+}
+
+.md-tabs {
+  background-color: var(--claude-bg);
+  border-bottom: 1px solid var(--claude-border);
+}
+
+.md-tabs__link {
+  color: var(--claude-text-muted);
+}
+
+.md-tabs__link--active,
+.md-tabs__link:hover {
+  color: var(--claude-text);
+}
+
+/* 链接与强调色 */
+.md-typeset a {
+  color: var(--claude-accent);
+  text-decoration: none;
+}
+
+.md-typeset a:hover {
+  color: var(--claude-accent-hover);
+  text-decoration: underline;
+}
+
+/* 侧边栏当前项使用陶土色，而非默认蓝色系 */
+.md-nav__link--active,
+.md-nav__link:focus,
+.md-nav__link:hover {
+  color: var(--claude-accent);
+}
+
+/* 卡片 / 代码块 圆角与留白，贴近 Claude Docs 的柔和观感 */
+.md-typeset pre,
+.md-typeset code,
+.md-typeset .highlight {
+  border-radius: 10px;
+}
+
+.md-typeset table {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--claude-border);
+}
+
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: 10px;
+  border: 1px solid var(--claude-border);
+}
+
+.md-search__form {
+  border-radius: 8px;
+}
+
+/* =========================================================
+   Knowledge Base - Global Styles
+   ========================================================= */
+
+
+/* =========================================================
+   1. 禁止普通文字选择
+   ========================================================= */
+
+body {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+
+/*
+ * 代码区域允许选择。
+ *
+ * 这样以后知识库中的代码仍然可以正常查看，
+ * 不会因为全局 user-select:none 导致代码区域体验很差。
+ */
+pre,
+pre code,
+.md-code__content {
+  user-select: text;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+}
+
+
+/* =========================================================
+   2. 斜向时间水印
+   ========================================================= */
+
+#time-watermark {
+  position: fixed;
+
+  /*
+   * 覆盖整个浏览器窗口
+   */
+  inset: 0;
+
+  /*
+   * 水印位于页面内容之上，
+   * 但 pointer-events:none 保证不会影响点击。
+   */
+  z-index: 9999;
+
+  pointer-events: none;
+  user-select: none;
+
+  /*
+   * 水印本身旋转。
+   */
+  transform: rotate(-25deg);
+
+  /*
+   * 放大水印层，避免旋转后出现边缘空白。
+   */
+  width: 140%;
+  height: 140%;
+
+  left: -20%;
+  top: -20%;
+
+  /*
+   * 使用 CSS Grid 平铺时间。
+   */
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+
+  align-items: center;
+  justify-items: center;
+
+  /*
+   * 防止文字换行。
+   */
+  white-space: nowrap;
+
+  /*
+   * 不让水印产生滚动条。
+   */
+  overflow: hidden;
+
+  /*
+   * 浅色模式默认颜色。
+   */
+  color: rgba(100, 100, 100, 0.10);
+
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+
+  letter-spacing: 0.8px;
+}
+
+
+/* =========================================================
+   3. 水印文字
+   ========================================================= */
+
+.time-watermark-item {
+  display: block;
+
+  /*
+   * 防止文字被选中。
+   */
+  user-select: none;
+  -webkit-user-select: none;
+
+  /*
+   * 水印略微增加间距。
+   */
+  padding: 30px 60px;
+
+  /*
+   * 不透明度由父元素控制。
+   */
+  opacity: 1;
+}
+
+
+/* =========================================================
+   4. 深色模式
+   ========================================================= */
+
+[data-md-color-scheme="slate"] #time-watermark {
+  color: rgba(255, 255, 255, 0.09);
+}
+
+
+/* =========================================================
+   5. 防止水印影响页面滚动
+   ========================================================= */
+
+#time-watermark,
+#time-watermark * {
+  pointer-events: none !important;
+}
+
+
+/* =========================================================
+   6. 移动端适配
+   ========================================================= */
+
+@media screen and (max-width: 768px) {
+
+  #time-watermark {
+    font-size: 11px;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+
+    transform: rotate(-25deg) scale(1.05);
+  }
+
+  .time-watermark-item {
+    padding: 25px 40px;
+  }
+}
+
+
+/* =========================================================
+   7. 超小屏幕
+   ========================================================= */
+
+@media screen and (max-width: 480px) {
+
+  #time-watermark {
+    font-size: 9px;
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+  }
+
+}
+
+/* =========================================================
+   8. 页面整体尺寸微调
+   仅调整字号、搜索框、导航和控件大小
+   不影响其他主题配置
+   ========================================================= */
+
+/* ---------- 正文 ---------- */
+
+.md-typeset {
+  font-size: 0.88rem;
+  line-height: 1.75;
+}
+
+/* 正文段落 */
+.md-typeset p,
+.md-typeset ul,
+.md-typeset ol {
+  margin-top: 0.65em;
+  margin-bottom: 0.65em;
+}
+
+
+/* ---------- 标题 ---------- */
+
+.md-typeset h1 {
+  font-size: 1.9rem;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+}
+
+.md-typeset h2 {
+  font-size: 1.45rem;
+  line-height: 1.35;
+  margin-top: 1.7rem;
+  margin-bottom: 0.8rem;
+}
+
+.md-typeset h3 {
+  font-size: 1.15rem;
+  line-height: 1.4;
+  margin-top: 1.4rem;
+  margin-bottom: 0.65rem;
+}
+
+.md-typeset h4 {
+  font-size: 1rem;
+}
+
+
+/* ---------- 侧边栏 ---------- */
+
+.md-nav {
+  font-size: 0.78rem;
+}
+
+.md-nav__link {
+  margin-top: 0.1rem;
+  padding: 0.22rem 0.55rem;
+}
+
+.md-nav__item .md-nav__link {
+  line-height: 1.45;
+}
+
+
+/* ---------- 顶部导航 ---------- */
+
+.md-tabs__link {
+  font-size: 0.78rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+
+.md-header__title {
+  font-size: 0.85rem;
+}
+
+
+/* ---------- 搜索框 ---------- */
+
+.md-search {
+  font-size: 0.8rem;
+}
+
+.md-search__form {
+  height: 2rem;
+  border-radius: 6px;
+}
+
+.md-search__input {
+  font-size: 0.78rem;
+  height: 2rem;
+}
+
+.md-search__icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+
+/* 搜索结果 */
+
+.md-search-result__item {
+  font-size: 0.78rem;
+}
+
+.md-search-result__title {
+  font-size: 0.8rem;
+}
+
+.md-search-result__teaser {
+  font-size: 0.72rem;
+}
+
+
+/* ---------- 代码 ---------- */
+
+.md-typeset code {
+  font-size: 0.78em;
+}
+
+.md-typeset pre {
+  font-size: 0.76rem;
+  line-height: 1.6;
+}
+
+
+/* ---------- 表格 ---------- */
+
+.md-typeset table:not([class]) {
+  font-size: 0.78rem;
+}
+
+.md-typeset table:not([class]) th,
+.md-typeset table:not([class]) td {
+  padding: 0.55em 0.7em;
+}
+
+
+/* ---------- 引用块 / 提示框 ---------- */
+
+.md-typeset blockquote {
+  font-size: 0.85rem;
+}
+
+.md-typeset .admonition,
+.md-typeset details {
+  font-size: 0.82rem;
+}
+
+
+/* ---------- 按钮 ---------- */
+
+.md-button {
+  font-size: 0.76rem;
+  padding: 0.5em 0.9em;
+}
+
+
+/* ---------- 图标 ---------- */
+
+.md-icon {
+  width: 0.95rem;
+  height: 0.95rem;
+}
+
+.md-header__button {
+  width: 1.9rem;
+  height: 1.9rem;
+}
+
+
+/* ---------- 页面内容宽度与间距 ---------- */
+
+.md-main__inner {
+  margin-top: 1rem;
+}
+
+.md-content {
+  font-size: 0.88rem;
+}
+
+
+/* ---------- 小屏幕 ---------- */
+
+@media screen and (max-width: 768px) {
+
+  .md-typeset {
+    font-size: 0.86rem;
+  }
+
+  .md-typeset h1 {
+    font-size: 1.65rem;
+  }
+
+  .md-typeset h2 {
+    font-size: 1.3rem;
+  }
+
+  .md-typeset h3 {
+    font-size: 1.08rem;
+  }
+
+  .md-search__form,
+  .md-search__input {
+    height: 1.9rem;
+  }
+
+}
