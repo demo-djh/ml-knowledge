@@ -3,7 +3,7 @@ site_description: Quick Guide to Machine Learning
 site_author: Demo
 
 repo_name: demo-djh/ml-knowledge
-repo_url: https://demo-djh.github.io/ml-knowledge
+repo_url: https://github.com/demo-djh/ml-knowledge
 
 theme:
   name: material
