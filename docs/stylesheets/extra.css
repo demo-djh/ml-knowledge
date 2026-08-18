@@ -340,3 +340,148 @@ pre code,
   }
 
 }
+
+/* =========================================================
+   Glossary - 名词解释
+   ========================================================= */
+
+.glossary-term {
+  position: relative;
+
+  color: var(--claude-accent);
+
+  border-bottom: 1px dashed
+    var(--claude-accent);
+
+  cursor: help;
+
+  transition:
+    color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.glossary-term:hover {
+  color: var(--claude-accent-hover);
+
+  border-bottom-color:
+    var(--claude-accent-hover);
+}
+
+
+/* =========================================================
+   Glossary Tooltip
+   ========================================================= */
+
+#glossary-tooltip {
+  position: fixed;
+
+  z-index: 10001;
+
+  width: min(
+    360px,
+    calc(100vw - 32px)
+  );
+
+  padding: 14px 16px;
+
+  box-sizing: border-box;
+
+  background:
+    var(--claude-bg);
+
+  color:
+    var(--claude-text);
+
+  border: 1px solid
+    var(--claude-border);
+
+  border-radius: 10px;
+
+  box-shadow:
+    0 8px 30px
+    rgba(0, 0, 0, 0.12);
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transform:
+    translateY(-4px);
+
+  transition:
+    opacity 0.15s ease,
+    transform 0.15s ease,
+    visibility 0.15s ease;
+
+  pointer-events: none;
+
+  line-height: 1.6;
+
+  font-size: 14px;
+}
+
+#glossary-tooltip.is-visible {
+  opacity: 1;
+
+  visibility: visible;
+
+  transform:
+    translateY(0);
+}
+
+
+/* =========================================================
+   Tooltip 标题
+   ========================================================= */
+
+.glossary-tooltip-title {
+  margin-bottom: 6px;
+
+  font-weight: 600;
+
+  font-size: 15px;
+
+  color:
+    var(--claude-text);
+}
+
+
+/* =========================================================
+   Tooltip 内容
+   ========================================================= */
+
+.glossary-tooltip-description {
+  color:
+    var(--claude-text-muted);
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   深色模式
+   ========================================================= */
+
+[data-md-color-scheme="slate"]
+#glossary-tooltip {
+  box-shadow:
+    0 8px 30px
+    rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================================
+   移动端
+   ========================================================= */
+
+@media screen and (max-width: 768px) {
+
+  #glossary-tooltip {
+    width: calc(100vw - 32px);
+
+    font-size: 13px;
+
+    padding: 13px 14px;
+  }
+
+}
