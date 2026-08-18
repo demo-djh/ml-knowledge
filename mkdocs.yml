@@ -64,7 +64,6 @@ markdown_extensions:
 nav:
   - Home: index.md
 
-  - TEST: index.md
 
   - AI:
       - Overview: AI/README.md
@@ -72,3 +71,6 @@ nav:
 
   - Research:
       - Overview: Research/README.md
+      
+  - TEST: 
+      - Overview: TEST/README.md
