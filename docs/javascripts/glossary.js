@@ -14,20 +14,98 @@
       description:
         "一种让计算机从数据中学习规律，并利用学习到的规律对新数据进行预测或决策的方法。"
     },
-
-    /*
-    "监督学习": {
-      title: "监督学习（Supervised Learning）",
+    
+    "数据": {
+      title: "数据（Data）",
       description:
-        "使用带有标签的数据训练模型，使模型学习输入与输出之间映射关系的方法。"
+        "用来训练和测试计算机的信息，通常包含特征和标签。"
     },
 
-    "深度学习": {
-      title: "深度学习（Deep Learning）",
+    "特征": {
+      title: "特征（Feature）",
       description:
-        "基于多层神经网络进行表示学习和模式识别的机器学习方法。"
+        "用来描述数据的输入变量或属性。"
     },
-    */
+
+    "标签": {
+      title: "标签（Label）",
+      description:
+        "模型想要预测的真实结果或输出答案。"
+    },
+
+    "模型": {
+      title: "模型（Model）",
+      description:
+        "通过算法对数据进行学习后得到的程序，能对新数据做出预测。"
+    },
+
+    "标签": {
+      title: "权重（Weight）",
+      description:
+        "模型中用于调整特征重要程度的参数。"
+    },
+
+    "线性回归": {
+      title: "线性回归（Linear Regression）",
+      description:
+        "用于预测连续数值的简单监督学习算法。"
+    },
+    
+    "逻辑回归": {
+      title: "逻辑回归（Logistic Regression）",
+      description:
+        "用于处理分类问题的基础算法。"
+    },
+    
+    "神经网络": {
+      title: "神经网络（Neural Network）",
+      description:
+        "模仿人脑结构的多层计算模型，是深度学习的基础。"
+    },
+    
+    "决策树": {
+      title: "决策树（Decision Tree）",
+      description:
+        "通过树状分支结构进行分类和预测的算法。"
+    },
+    
+    "生成对抗网络": {
+      title: "生成对抗网络（GAN）",
+      description:
+        "由生成器和判别器组成、通过互相博弈来生成逼真数据的模型。"
+    },
+    
+    "过拟合": {
+      title: "过拟合（Overfitting）",
+      description:
+        "模型在训练集上表现极好，但在新数据上表现很差。"
+    },
+    
+    "欠拟合": {
+      title: "欠拟合（Underfitting）",
+      description:
+        "模型过于简单，连训练集的规律都没能学会。"
+    },
+    
+    "损失函数": {
+      title: "损失函数（Loss Function）",
+      description:
+        "用来衡量模型预测值和真实值差距的数学公式。"
+    },
+    
+    "激活函数": {
+      title: "激活函数（Activation Function）",
+      description:
+        "给神经元引入非线性能力的关键函数，如 ReLU、Sigmoid。"
+    },
+    
+    "准确率": {
+      title: "准确率（Accuracy）",
+      description:
+        "分类正确的样本数占总样本数的比例。"
+    },
+    
+    
   };
 
 
