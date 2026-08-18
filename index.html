@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ML‑Knowledge 机器学习知识库</title>
+  <!-- Docsify 核心库 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <!-- 搜索插件 -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <!-- tooltip名词悬浮解释插件 -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-tooltip/dist/docsify-tooltip.min.js"></script>
+  <!-- 主题样式 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
+  <style>
+    /* 微调悬浮提示样式，中文阅读更舒服 */
+    .tooltip-content {
+      max-width: 420px;
+      font-size:14px;
+      line-height:1.6;
+    }
+  </style>
+</head>
+<body>
+<div id="app"></div>
+
+<script>
+window.$docsify = {
+  name: 'ml‑knowledge',
+  repo: '',
+  // 侧边栏目录，如果你的文档多建议开启
+  loadSidebar: true,
+  subMaxLevel: 2,
+  // 全文搜索
+  search: {
+    placeholder: "文档搜索"
+  },
+  // ==========在这里维护你的【名词解释词典】新增名词直接复制格式添加==========
+  tooltip: {
+    fullMatch: true,       // 开启完整词语匹配，避免片段误匹配，推荐开启
+    caseSensitive: false,  // false=不区分大小写
+    dictionary: {
+      "机器学习": "机器学习是人工智能的一个分支，通过算法从数据中自动学习模式，不需要人工编写全部规则来完成任务。",
+      "深度学习": "深度学习是机器学习的子领域，依靠多层神经网络完成特征自动提取，擅长图像、文本等复杂任务。",
+      "过拟合": "模型在训练数据集表现极好，但在未知测试数据集泛化能力差。",
+      "欠拟合": "模型复杂度不足，训练集与测试集效果都较差。",
+      "梯度下降": "机器学习常用优化算法，沿着梯度反方向更新参数，最小化损失函数。"
+    }
+  }
+}
+</script>
+</body>
+</html>
