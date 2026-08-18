@@ -8,4 +8,4 @@
 
 - [AI](AI/README.md)
 - [Research](Research/README.md)
-- [TESTt](TEST/README.md)
+- [TEST](TEST/README.md)
