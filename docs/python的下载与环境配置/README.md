@@ -1,7 +1,5 @@
-# AI
+# python的下载与环境配置
 
 这里记录人工智能相关的基础知识与学习笔记。
 
-## 目录
 
-- [Deep Learning](Deep-Learning/README.md)
