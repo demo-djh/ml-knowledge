@@ -463,5 +463,5 @@ sorted(data, key=lambda x: x[1], reverse=True)
 
 ---
 
-> 上一章：[Python 安装入门](../下载与环境配置/README.md)
+> 上一章：[Python 安装入门](../下载与环境配置.md)
 > 下一章：[编程环境部署](../../开发环境/编程环境部署.md)
