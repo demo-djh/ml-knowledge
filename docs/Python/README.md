@@ -4,8 +4,8 @@ Python 是机器学习的核心编程语言。本部分涵盖 Python 的安装�
 
 ## 章节列表
 
-- [Python 安装入门](下载与环境配置README.md) — 从零下载安装 Python，配置 pip 镜像源
-- [Python 基础语法](Python基础语法README.md) — 机器学习高频核心语法速通
+- [Python 安装入门](下载与环境配置.md) — 从零下载安装 Python，配置 pip 镜像源
+- [Python 基础语法](Python基础语法.md) — 机器学习高频核心语法速通
 
 ## 学习目标
 
