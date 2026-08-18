@@ -64,6 +64,8 @@ markdown_extensions:
 nav:
   - Home: index.md
 
+  - test: index.md
+
   - AI:
       - Overview: AI/README.md
       - Deep Learning: AI/Deep-Learning/README.md
