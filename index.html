@@ -5,19 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ML‑Knowledge 机器学习知识库</title>
 
-  <script src="https://cdn.jsdelivr.net/npm/docsify@4.13.0/lib/docsify.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify@4.13.0/lib/plugins/search.min.js"></script>
-  <!-- 使用指定稳定版本 tooltip -->
-  <script src="https://cdn.jsdelivr.net/npm/docsify-tooltip@1.3.2/dist/docsify-tooltip.min.js"></script>
+  <script src="https://unpkg.com/docsify@4.13.0/lib/docsify.min.js"></script>
+  <script src="https://unpkg.com/docsify@4.13.0/lib/plugins/search.min.js"></script>
+  <script src="https://unpkg.com/docsify-tooltip@1.3.2/dist/docsify-tooltip.min.js"></script>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4.13.0/lib/themes/vue.css">
+  <link rel="stylesheet" href="https://unpkg.com/docsify@4.13.0/lib/themes/vue.css">
   <style>
     .tooltip-content {
       max-width: 420px;
       font-size:14px;
       line-height:1.6;
     }
-    /* 被匹配的名词下划线样式，方便肉眼识别有没有命中 */
     .docsify-tooltip-word{
       border-bottom:1px dashed #42b983 !important;
     }
@@ -32,11 +30,13 @@ window.$docsify = {
   repo: '',
   loadSidebar: false,
   subMaxLevel: 2,
+  // 如果找不到文档，展示404提示，不再无限loading
+  notFoundPage: true,
   search: {
     placeholder: "文档搜索"
   },
   tooltip: {
-    fullMatch: false,       // 先关闭完整匹配测试，确认功能可用后再改true
+    fullMatch: false,
     caseSensitive: false,
     dictionary: {
       "机器学习": "机器学习是人工智能的一个分支，通过算法从数据中自动学习模式，不需要人工编写全部规则来完成任务。",
