@@ -65,9 +65,9 @@ nav:
   - Home: index.md
 
 
-  - python的下载与环境配置:
-      - Overview: python的下载与环境配置/README.md
-      - python的下载: python的下载与环境配置/python的下载/README.md
+  - Python:
+      - Overview: Python/README.md
+      - 下载与环境配置: Python/下载与环境配置/README.md
 
   - Research:
       - Overview: Research/README.md
