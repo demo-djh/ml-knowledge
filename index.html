@@ -26,11 +26,12 @@
 
 <script>
 window.$docsify = {
+  base: '/ml-knowledge/',  // 强制设置仓库子路径！这是github.io子仓库卡死loading关键！
   name: 'ml‑knowledge',
   repo: '',
   loadSidebar: false,
   subMaxLevel: 2,
-  // 如果找不到文档，展示404提示，不再无限loading
+  homepage: 'README.md',
   notFoundPage: true,
   search: {
     placeholder: "文档搜索"
