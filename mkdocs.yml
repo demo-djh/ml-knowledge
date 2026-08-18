@@ -44,6 +44,13 @@ extra_css:
 
 extra_javascript:
   - javascripts/extra.js
+  
+plugins:
+  - search
+  - git-revision-date-localized:
+      type: datetime
+      timezone: Asia/Shanghai
+      locale: zh_CN
 
 markdown_extensions:
   - pymdownx.highlight
