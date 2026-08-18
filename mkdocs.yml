@@ -67,8 +67,8 @@ nav:
 
   - Python:
       - 概览: Python/README.md
-      - Python 安装入门: Python/下载与环境配置/README.md
-      - Python 基础语法: Python/Python基础语法/README.md
+      - Python 安装入门: Python/下载与环境配置.md
+      - Python 基础语法: Python/Python基础语法.md
 
   - 开发环境:
       - 概览: 开发环境/README.md
