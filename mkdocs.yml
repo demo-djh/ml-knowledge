@@ -63,15 +63,35 @@ markdown_extensions:
       permalink: true
 
 nav:
-  - Home: index.md
-
+  - 首页: index.md
 
   - Python:
-      - Overview: Python/README.md
-      - 下载与环境配置: Python/下载与环境配置/README.md
+      - 概览: Python/README.md
+      - Python 安装入门: Python/下载与环境配置/README.md
+      - Python 基础语法: Python/Python基础语法/README.md
 
-  - Research:
-      - Overview: Research/README.md
+  - 开发环境:
+      - 概览: 开发环境/README.md
+      - 编程环境部署: 开发环境/编程环境部署.md
+      - Anaconda 环境配置: 开发环境/Anaconda环境配置.md
+
+  - 数据处理:
+      - 概览: 数据处理/README.md
+      - 数据抓取（爬虫）: 数据处理/数据抓取.md
+      - 数据基础处理: 数据处理/数据基础处理.md
+      - 数据正则化: 数据处理/数据正则化.md
+
+  - 数据可视化:
+      - 概览: 数据可视化/README.md
+      - 数据图表可视化: 数据可视化/数据图表可视化.md
+
+  - 机器学习基础:
+      - 概览: 机器学习基础/README.md
+      - 机器学习基础名词: 机器学习基础/机器学习基础名词.md
+      - 机器学习完整过程: 机器学习基础/机器学习完整过程.md
+
+  - 机器学习算法:
+      - 概览: 机器学习算法/README.md
+      - 机器学习算法简介: 机器学习算法/机器学习算法简介.md
+      - 机器学习算法实践: 机器学习算法/机器学习算法实践.md
       
-  - TEST: 
-      - Overview: TEST/README.md
